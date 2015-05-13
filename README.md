@@ -42,7 +42,7 @@ You'll be prompted for the Firebase app you want to be able to deploy.
 
 ## Lab
 
-Break up into groups and ensure that each of you can run the example app locally using `$ grunt serve`.  Run the app from two different browsers (or two different browser sessions) and explore its behavior.  Use the Firebase **[Dashboard](https://www.firebase.com/account/)** to get to the apps data to see how it changes.
+Break up into groups and ensure that each of you can run the example app locally using `$ grunt serve`.  Run the app from two different browsers (or two different browser sessions) and explore its behavior.  Use the Firebase **[Dashboard](https://www.firebase.com/account/)** to get to the app's data to see how it changes.
 
 ### Optional
 
