@@ -9,6 +9,7 @@ $(function(){
     return player === 'X' ? 'O' : 'X';
   };
 
+  //Get a "unique" id for the user
   if (!(gameAuth = gameRef.getAuth())) {
     gameRef.authAnonymously(function(error, authData) {
       if (error) {
@@ -19,16 +20,19 @@ $(function(){
     });
   }
 
+  //User takes turn
   $('#move').on('click', function(e){
     $('#move').prop('disabled', true);
     gameRef.set({player: otherPlayer(player), waitingPlayer: gameAuth.uid});
   });
 
+  //User restarts game
   $('#restart').on('click', function(e){
     $('#move').prop('disabled', true);
     gameRef.set({player: 'X'});
   });
 
+  //On load, set up event handling on the object at "gameRef"
   gameRef.on('value', function(snapshot) {
     var message = snapshot.val();
     var disable = false;
